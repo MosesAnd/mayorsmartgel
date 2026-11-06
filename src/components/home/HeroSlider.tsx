@@ -11,6 +11,7 @@ interface SlideData {
   badgeSubColor: string;
   title: string;
   description: string;
+  socialTags?: string[];
   primaryCtaText: string;
   primaryCtaLink: string;
   primaryCtaIcon: string;
@@ -25,26 +26,32 @@ interface SlideData {
 const slides: SlideData[] = [
   {
     id: 0,
-    badge: "Tier-IV Sovereign Core",
+    badge: "Social Media & Growth",
     badgeHighlight: "bg-secondary-container",
-    badgeSub: "99.999% SLA",
-    badgeSubColor: "text-secondary-fixed",
-    title: "Autonomous Cloud & Infrastructure",
+    badgeSub: "Facebook • Instagram • TikTok",
+    badgeSubColor: "text-secondary-fixed font-mono",
+    title: "Digital Marketing & Social Media Dominance",
     description:
-      "Mission-critical hybrid orchestration, zero-downtime mesh conversions, and sovereign multi-region resilience for Fortune 500 institutions and public sectors.",
-    primaryCtaText: "Explore Cloud Solutions",
-    primaryCtaLink: "/services/software-development",
-    primaryCtaIcon: "arrow_forward",
-    secondaryCtaText: "Platform Architecture",
-    secondaryCtaLink: "/solutions",
-    secondaryCtaIcon: "play_circle",
-    metrics: [
-      { value: "< 14ms", label: "Global Latency", highlight: true },
-      { value: "100%", label: "Sovereign Data" },
-      { value: "18 Nodes", label: "EMEA / APAC" },
+      "Scale audience engagement and accelerate high-ticket sales through precision Facebook ads, Instagram brand storytelling, and viral TikTok growth campaigns engineered for explosive ROAS.",
+    socialTags: [
+      "Facebook Performance Ads",
+      "Instagram Brand Elevation",
+      "TikTok Viral Strategies",
+      "Full-Funnel ROAS Scaling",
     ],
-    bgImage: "/assets/img/datacenter-cloud.png",
-    pillLabel: "01 Cloud",
+    primaryCtaText: "Launch Social Campaign",
+    primaryCtaLink: "/services/digital-marketing",
+    primaryCtaIcon: "campaign",
+    secondaryCtaText: "Request Growth Audit",
+    secondaryCtaLink: "/contact",
+    secondaryCtaIcon: "trending_up",
+    metrics: [
+      { value: "4.8x+", label: "Average ROAS", highlight: true },
+      { value: "15M+", label: "Social Impressions" },
+      { value: "Meta & TikTok", label: "Certified Campaigns" },
+    ],
+    bgImage: "/assets/img/tech-architects.png",
+    pillLabel: "01 Digital Marketing",
   },
   {
     id: 1,
@@ -52,14 +59,14 @@ const slides: SlideData[] = [
     badgeHighlight: "bg-emerald-400",
     badgeSub: "SOC 2 / ISO 27001",
     badgeSubColor: "text-white font-mono",
-    title: "Next-Gen Cybersecurity & Sovereign Defense",
+    title: "Next-Gen Cybersecurity & IT Consulting",
     description:
       "Zero-trust architecture, quantum-safe encryption, and 24/7 proactive threat mitigation protecting sovereign networks and high-throughput transactional vaults.",
     primaryCtaText: "Security Briefing",
     primaryCtaLink: "/services/cybersecurity",
     primaryCtaIcon: "shield",
     secondaryCtaText: "Inspect Threat Fabric",
-    secondaryCtaLink: "/#telemetry",
+    secondaryCtaLink: "/solutions",
     secondaryCtaIcon: "visibility",
     metrics: [
       { value: "0 CVEs", label: "Unmitigated", highlight: true },
@@ -67,30 +74,30 @@ const slides: SlideData[] = [
       { value: "TLS 1.3+", label: "PQ-Encrypted" },
     ],
     bgImage: "/assets/img/cybersecurity-noc.png",
-    pillLabel: "02 Cyber",
+    pillLabel: "02 Cybersecurity",
   },
   {
     id: 2,
-    badge: "Applied Neural Architecture",
+    badge: "Enterprise Engineering",
     badgeHighlight: "bg-cyan-400",
-    badgeSub: "Private Weights",
-    badgeSubColor: "text-secondary-fixed",
-    title: "Enterprise AI & Deterministic Intelligence",
+    badgeSub: "Cloud & Web/Mobile",
+    badgeSubColor: "text-secondary-fixed font-mono",
+    title: "Custom Software & Application Development",
     description:
-      "Private LLMs, high-speed neural pipelines, and sovereign data models designed to eliminate hallucinations with sub-millisecond execution.",
-    primaryCtaText: "Discover AI Framework",
+      "High-performance enterprise platforms, mobile applications, and resilient cloud architectures engineered with speed, scalability, and deterministic precision.",
+    primaryCtaText: "Explore Software Dev",
     primaryCtaLink: "/services/software-development",
-    primaryCtaIcon: "psychology",
-    secondaryCtaText: "Commercial Growth",
-    secondaryCtaLink: "/services/digital-marketing",
-    secondaryCtaIcon: "campaign",
+    primaryCtaIcon: "terminal",
+    secondaryCtaText: "View Case Studies",
+    secondaryCtaLink: "/solutions",
+    secondaryCtaIcon: "code",
     metrics: [
-      { value: "1.82M", label: "Tx / Second", highlight: true },
-      { value: "Air-Gapped", label: "Fine-Tuning" },
-      { value: "Zero Drift", label: "Governance" },
+      { value: "99.99%", label: "Uptime SLA", highlight: true },
+      { value: "< 14ms", label: "Global Latency" },
+      { value: "Cloud-Native", label: "Architecture" },
     ],
-    bgImage: "/assets/img/ai-neural-matrix.png",
-    pillLabel: "03 AI & Growth",
+    bgImage: "/assets/img/datacenter-cloud.png",
+    pillLabel: "03 Software & Cloud",
   },
 ];
 
@@ -168,6 +175,21 @@ export default function HeroSlider() {
                   <p className="text-base sm:text-lg text-slate-300 font-normal leading-relaxed">
                     {slide.description}
                   </p>
+
+                  {/* Social Platform Badges */}
+                  {slide.socialTags && (
+                    <div className="flex flex-wrap items-center gap-2 pt-1">
+                      {slide.socialTags.map((tag, tIdx) => (
+                        <span
+                          key={tIdx}
+                          className="px-3 py-1 rounded-full bg-white/10 border border-white/20 text-xs font-medium text-secondary-container backdrop-blur-md flex items-center gap-1.5"
+                        >
+                          <span className="w-1.5 h-1.5 rounded-full bg-secondary-container animate-pulse"></span>
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  )}
 
                   {/* Dual CTA Buttons */}
                   <div className="flex flex-wrap items-center gap-4 pt-2">

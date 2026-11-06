@@ -36,3 +36,6 @@ next-env.d.ts
 
 # raw design files
 .stitch_source/
+
+.vercel
+.env*

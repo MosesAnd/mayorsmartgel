@@ -10,6 +10,12 @@ export const metadata: Metadata = {
 export default function DigitalMarketingServicePage() {
   const capabilities = [
     {
+      title: "Social Media Marketing (Facebook, Instagram & TikTok)",
+      desc: "Full-funnel paid and organic social campaigns engineered for rapid revenue growth. From viral TikTok creatives and Instagram brand positioning to hyper-targeted Facebook retargeting and Lookalike scaling, we maximize ROAS and customer lifetime value.",
+      deliverables: ["Meta (Facebook/Instagram) & TikTok Ads management", "High-converting UGC & video creative production", "Pixel & CAPI server-side event tracking"],
+      icon: "share",
+    },
+    {
       title: "Algorithmic Demand Generation (ABM)",
       desc: "Precision account-based marketing engineered for complex institutional buying cycles. We map executive buying committees across target Fortune 500s and deploy personalized, multi-touch digital experiences.",
       deliverables: ["Account intent data integration", "C-suite tailored landing experiences", "High-conversion pipeline acceleration"],
