@@ -1,0 +1,103 @@
+import type { Config } from "tailwindcss";
+
+const config: Config = {
+  content: [
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        primary: "#00173e",
+        "primary-container": "#002b66",
+        "navy-deep": "#001D47",
+        "surface-tint": "#3f5d9a",
+        "inverse-primary": "#aec6ff",
+        "primary-fixed": "#d8e2ff",
+        "primary-fixed-dim": "#aec6ff",
+        "on-primary": "#ffffff",
+        "on-primary-container": "#7794d5",
+        "on-primary-fixed": "#001a43",
+        "on-primary-fixed-variant": "#254581",
+
+        secondary: "#7b5800",
+        "secondary-container": "#fdbf35",
+        "gold-hover": "#E0A31B",
+        "gold-soft": "#FEF7E6",
+        "secondary-fixed": "#ffdea5",
+        "secondary-fixed-dim": "#fabc33",
+        "on-secondary": "#ffffff",
+        "on-secondary-container": "#6e4f00",
+        "on-secondary-fixed": "#261900",
+        "on-secondary-fixed-variant": "#5d4200",
+
+        "surface-canvas": "#F8FAFC",
+        surface: "#f8f9ff",
+        "surface-container-lowest": "#ffffff",
+        "surface-container-low": "#eff4ff",
+        "surface-container": "#e5eeff",
+        "surface-container-high": "#e0e9f9",
+        "surface-container-highest": "#dae3f4",
+        "surface-subtle": "#F1F5F9",
+        "surface-dim": "#d1daeb",
+        "surface-bright": "#f8f9ff",
+        "surface-variant": "#dae3f4",
+        "on-surface": "#131c28",
+        "on-surface-variant": "#444750",
+        "on-background": "#131c28",
+        background: "#f8f9ff",
+        "inverse-surface": "#28313d",
+        "inverse-on-surface": "#eaf1ff",
+
+        "border-subtle": "#E2E8F0",
+        "border-bold": "#CBD5E1",
+        outline: "#747781",
+        "outline-variant": "#c4c6d1",
+
+        tertiary: "#3c0006",
+        "tertiary-container": "#630010",
+        "on-tertiary-container": "#ff5d63",
+        "tertiary-fixed": "#ffdad8",
+        "tertiary-fixed-dim": "#ffb3b1",
+
+        error: "#ba1a1a",
+        "error-container": "#ffdad6",
+        "on-error": "#ffffff",
+        "on-error-container": "#93000a",
+      },
+      fontFamily: {
+        sans: ["var(--font-ibm-plex-sans)", "IBM Plex Sans", "sans-serif"],
+        mono: ["var(--font-ibm-plex-mono)", "ui-monospace", "monospace"],
+      },
+      borderRadius: {
+        DEFAULT: "0.25rem",
+        sm: "0.125rem",
+        md: "0.375rem",
+        lg: "0.5rem",
+        xl: "0.75rem",
+        "2xl": "1rem",
+        full: "9999px",
+      },
+      spacing: {
+        "gutter-sm": "1rem",
+        gutter: "1.5rem",
+        "gutter-lg": "2rem",
+        "space-xs": "0.25rem",
+        "space-sm": "0.5rem",
+        "space-md": "1rem",
+        "space-lg": "1.5rem",
+        "space-xl": "2.5rem",
+      },
+      boxShadow: {
+        sm: "0 1px 3px rgba(27, 36, 48, 0.04), 0 4px 12px rgba(27, 36, 48, 0.03)",
+        md: "0 8px 24px rgba(0, 43, 102, 0.08)",
+        lg: "0 20px 48px rgba(0, 29, 71, 0.16)",
+      },
+    },
+  },
+  plugins: [],
+};
+
+export default config;
